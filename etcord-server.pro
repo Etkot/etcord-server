@@ -7,15 +7,13 @@ QMAKE_CXXFLAGS += -std=c++0x -pthread
 LIBS += -pthread
 
 SOURCES += main.cpp \
-    tcp/tcpserver.cpp \
+    networking/tcp/*.cpp \
     server/server.cpp \
     server/chatmessage.cpp
 
 HEADERS += \
-    tcp/tcpserver.h \
-    utils/safequeue.h \
-    tcp/tcppacket.h \
-    client.h \
+    networking/tcp/*.h \
+    server/client.h \
     server/server.h \
     server/chatmessage.h \
     server/channel.h
